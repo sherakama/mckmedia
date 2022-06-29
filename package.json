@@ -19,11 +19,10 @@
   },
   "homepage": "https://github.com/sherakama/airbnbclone#readme",
   "dependencies": {
-    "autoprefixer": "^10.4.7",
+    "@reduxjs/toolkit": "^1.8.2",
     "next": "^12.1.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "redux-toolkit": "^1.1.2"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -32,10 +31,21 @@
     "@tailwindcss/typography": "^0.5.2",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
+    "@types/react-dom": "18.0.5",
+    "@types/tailwindcss": "^3.0.11",
+    "cnbuilder": "^3.1.0",
     "eslint": "^8.18.0",
     "eslint-config-next": "^12.1.6",
+    "postcss": "^8.4.14",
     "postcss-import": "^14.1.0",
+    "postcss-preset-env": "^7.7.2",
     "tailwindcss": "^3.1.4",
     "typescript": "^4.7.4"
-  }
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ]
 }
