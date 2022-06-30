@@ -3,8 +3,8 @@ import { dcnb, ClassValue } from 'cnbuilder';
 
 export type HeadingType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-export const headingSizes = { 
-  h1: 'prose-2xl', 
+export const headingSizes = {
+  h1: 'prose-2xl',
   h2: 'prose-xl',
   h3: 'prose-lg',
   h4: 'prose-base',
@@ -18,10 +18,8 @@ export interface ContainerProps {
   className?: ClassValue;
 }
 
-const Heading = ({as = 'h2', children, className, ...props}: ContainerProps) => {
+export const Heading = ({ as = 'h2', children, className, ...props }: ContainerProps) => {
   const styles = ['prose'];
   styles.push(headingSizes[as]);
-  return React.createElement(as, { className: dcnb(styles, className), ...props}, children);
+  return React.createElement(as, { className: dcnb(styles, className), ...props }, children);
 }
-
-export default Heading

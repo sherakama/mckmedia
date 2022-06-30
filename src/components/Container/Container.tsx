@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, HTMLAttributes } from 'react';
 import { dcnb, ClassValue } from 'cnbuilder';
 
 export const containerElements = ['div', 'section', 'article', 'main', 'footer', 'aside', 'header', 'nav', 'form'];
@@ -10,10 +10,8 @@ export interface ContainerProps {
   center?: boolean;
 }
 
-const Container = ({as = 'div', children, className, center, ...props}: ContainerProps) => {
+export const Container = ({ as = 'div', children, className, center, ...props }: ContainerProps & HTMLAttributes<Element>) => {
   const styles = ['container'];
   if (center) { styles.push('mx-auto') }
-  return React.createElement(as, { className: dcnb(styles, className), ...props}, children);
+  return React.createElement(as, { className: dcnb(styles, className), ...props }, children);
 }
-
-export default Container
