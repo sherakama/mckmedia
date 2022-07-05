@@ -12,7 +12,7 @@ interface MainNavProps {
 export const MainNav = ({ navData }: MainNavProps) => {
 
   const navItems = navData.items.map((item: { title: string, icon: string }) => {
-    return <NavItem title={item.title} icon={item.icon} key={slugify(item.title)} />
+    return <NavItem key={slugify(item.title)} title={item.title} icon={item.icon} />
   });
 
   return (

@@ -8,12 +8,11 @@ interface NavItemProps {
   className?: string;
   title: string;
   icon: string;
-  key: string;
 }
 
-export const NavItem = ({ title, icon, key }: NavItemProps) => {
+export const NavItem = ({ title, icon }: NavItemProps) => {
   return (
-    <li key={key} className={dcnb(styles.root)}>
+    <li className={dcnb(styles.root)}>
       <Link href={`/${slugify(title)}`}>
         <a className="text-center">
           <span className="block text-center"><Image src={icon} alt={title} height={24} width={24} /></span>

@@ -9,10 +9,10 @@ import { UserUtilityNav } from '../UserUtilityNav';
 export const Masthead = () => {
   return (
     <div className={dcnb(styles.root)} >
-      <Container className="flex" center>
-        <Logo className="basis-1 flex-grow" />
-        <ComboSearch className="basis-3 flex-grow" />
-        <UserUtilityNav className="basis-1 flex-grow text-right" />
+      <Container center className={dcnb(styles.container)}>
+        <Logo className={dcnb(styles.logo)} />
+        <ComboSearch className={dcnb(styles.search)} />
+        <UserUtilityNav className={dcnb(styles.userNav)} />
       </Container>
     </div>
   )
