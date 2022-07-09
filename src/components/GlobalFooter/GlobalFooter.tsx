@@ -1,5 +1,4 @@
 import { Container } from '../Container';
-import Link from 'next/link';
 import { GlobalFooterStyles as styles } from './GlobalFooter.styles';
 import { dcnb } from 'cnbuilder';
 
@@ -13,9 +12,9 @@ export const GlobalFooter = ({ sticky = false, className }: GlobalFooterInterfac
   const year = today.getFullYear();
   return (
     <div className={dcnb(styles.root, className, (sticky ? styles.sticky : ''))}>
-      <Container center className="md:flex justify-between text-white">
-        <div className="basis-1 flex-grow">@{year} McKMedia • <Link href={'#'} className="hocus:underline"><a>Privacy</a></Link> • <Link href={'#'}><a>Terms</a></Link></div>
-        <div><Link href={'#'}><a>English (CA)</a></Link></div>
+      <Container center className="flex justify-between text-white px-6 lg:px-12">
+        <div className="basis-1 flex-grow">@{year} McKMedia</div>
+        <div><span>English (CA)</span></div>
       </Container>
     </div>
   )

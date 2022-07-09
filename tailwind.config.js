@@ -1,6 +1,5 @@
 /* eslint-disable import/no-dynamic-require */
 const plugin = require('tailwindcss/plugin');
-const path = require('path');
 
 module.exports = {
   content: [
@@ -54,14 +53,29 @@ module.exports = {
           textShadow: '1px 1px 3px #000',
         },
         '.classy-hover': {
-          boxShadow: 'inset 0 0 0 0 #075985',
-          transition: 'color .5s ease-in-out, box-shadow .5s ease-in-out',
-          '&:hover': {
-            boxShadow: 'inset 200px 0 0 0 #075985',
+          position: 'relative',
+          zIndex: 2,
+          '&::before': {
+            content: '" "',
+            display: 'block',
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            transform: 'scaleX(0)',
+            inset: '0 0 0 0',
+            background: '#075985',
+            transition: 'transform .3s ease',
+            transformOrigin: 'bottom right',
+            zIndex: -1,
           },
-          '&:focus': {
-            boxShadow: 'inset 300px 0 0 0 #075985',
-          }
+          '&:hover': {
+            '&::before': {
+              transform: 'scaleX(1)',
+              transformOrigin: 'bottom left',
+            },
+          },
         }
       });
     }),
