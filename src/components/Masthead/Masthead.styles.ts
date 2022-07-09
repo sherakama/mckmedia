@@ -1,9 +1,6 @@
 export const MastheadStyles: {
   [key: string]: string[]
 } = {
-  root: ['py-6'],
-  container: ['flex'],
-  logo: ['basis-1', 'flex-grow'],
-  search: ['basis-3','flex-grow'],
-  userNav: ['basis-1', 'flex-grow', 'text-right'],
+  root: ['py-2', 'bg-neutral-800', 'border-b', 'border-neutral-500'],
+  container: ['flex', 'place-content-between', 'text-white'],
 }

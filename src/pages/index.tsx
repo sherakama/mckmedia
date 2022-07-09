@@ -1,51 +1,36 @@
 import { Container } from 'src/components/Container/Container'
-import { Grid } from 'src/components/Grid';
 import { Masthead } from 'src/components/Masthead';
-import { MainNav } from 'src/components/MainNav';
-
-import navItems from '../data/main-nav.json';
 import { GlobalFooter } from 'src/components/GlobalFooter';
 import { LocalFooter } from 'src/components/LocalFooter';
-import { ResultCard } from 'src/components/ResultCard';
+import { LogoBanner } from 'src/components/LogoBanner';
+import { classyHeader } from 'src/styles/global';
+import Link from 'next/link';
 
 export default function Home() {
+
   return (
     <>
-      <header className="mb-8">
+      <header className="">
         <Masthead />
-        <MainNav navData={navItems} />
+        <LogoBanner />
       </header>
 
-      <main>
-        <Container center>
-          <Grid sm={2} md={3} lg={4} xl={5} gap={6}>
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
+      <main className="bg-neutral-800 border-y border-color-neutral-500">
+        <Container center className="text-center py-8">
+          <h2 className={classyHeader}> Get in touch</h2>
+          <address className="text-white not-italic prose-lg p-3">
+            McKMedia <br />
+            38355 Summit&lsquo;s View Drive.<br />
+            Squamish, BC
+          </address>
 
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
-
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
-
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
-            <ResultCard />
-          </Grid>
-
+          <p className="text-white"><Link href="tel:+17788399132"><a className="hocus:underline">+1 778.839.9132</a></Link> - <Link href="https://twitter.com/sherakama/"><a className="hocus:underline">@sherakama</a></Link></p>
         </Container>
       </main>
 
-      <footer className="bg-slate-100 my-12">
-        <LocalFooter className="bg-slate-100" />
-        <GlobalFooter sticky />
+      <footer className="bg-neutral-800">
+        <LocalFooter className="" />
+        <GlobalFooter />
       </footer>
     </>
   )

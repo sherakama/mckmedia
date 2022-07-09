@@ -1,8 +1,8 @@
 {
-  "name": "airbnbclone",
+  "name": "@sherakama/mckmedia",
   "version": "1.0.0",
   "private": true,
-  "description": "Air BnB Clone with NextJs",
+  "description": "McKMedia",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -14,15 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/sherakama/airbnbclone.git"
+    "url": "git+ssh://git@github.com/sherakama/mckmedia.git"
   },
   "author": "Shea McKinney",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/sherakama/airbnbclone/issues"
+    "url": "https://github.com/sherakama/mckmedia/issues"
   },
-  "homepage": "https://github.com/sherakama/airbnbclone#readme",
+  "homepage": "https://github.com/sherakama/mckmedia#readme",
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.2",
     "next": "^12.1.6",
     "react": "^18.2.0",
@@ -36,7 +37,6 @@
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "18.0.5",
-    "@types/tailwindcss": "^3.0.11",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "cnbuilder": "^3.1.0",
     "eslint": "^8.18.0",
