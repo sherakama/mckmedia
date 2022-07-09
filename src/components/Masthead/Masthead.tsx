@@ -12,12 +12,12 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Masthead = () => {
-  const socialStyles = 'inline-block h-full w-9 prose-xl md:prose-base';
+  const socialStyles = 'inline-block w-[1rem] md:w-4 mx-2 md:mx-1 pt-1';
 
   return (
     <div className={dcnb(styles.root)} >
       <Container center className={dcnb(styles.container)}>
-        <div className="prose-sm text-center mb-4 md:mb-0">Howdy! Welcome to our site <Link href={'mailto:shea@mckmedia.ca'}><a className="classy-hover p-1"><MailIcon className="h-5 w-5 inline" /> shea@mckmedia.ca</a></Link></div>
+        <div className="prose-sm text-center mb-2 md:mb-0">Howdy! Welcome to our site <Link href={'mailto:shea@mckmedia.ca'}><a className="classy-hover p-1"><MailIcon className="h-5 w-5 inline" /> shea@mckmedia.ca</a></Link></div>
         <div className="prose-sm text-center">
           <Link href={'https://twitter.com/sherakama'}>
             <a className={socialStyles}>
