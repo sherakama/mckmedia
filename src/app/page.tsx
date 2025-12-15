@@ -4,22 +4,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-pink-500/30">
-      {/* Navigation */}
-      <nav className="absolute top-0 left-0 z-50 w-full px-6 py-6">
-        <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <Link href="/" className="transition-opacity hover:opacity-80">
-            <Image
-              src="/logos/logo-pink-orange.png"
-              alt="MCK Media"
-              width={180}
-              height={50}
-              priority
-              className="h-12 w-auto"
-            />
-          </Link>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-6 text-center">
         <div className="absolute inset-0 -z-10">
@@ -58,7 +42,7 @@ export default function Home() {
       <section className="px-6 py-32 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
-            <h2 className="text-3xl font-bold sm:text-4xl">Why MCK Media?</h2>
+            <h2 className="text-3xl font-bold sm:text-4xl">Why McKMedia?</h2>
             <p className="mt-4 text-gray-400">Clarity over cleverness. Craft over shortcuts.</p>
           </div>
 
@@ -70,7 +54,7 @@ export default function Home() {
               },
               {
                 title: "Technically Sharp",
-                desc: "Built on the latest stack (Next.js 16, Tailwind v4) for performance, accessibility, and scale.",
+                desc: "Built on the latest stacks for performance, accessibility, and scale.",
               },
               {
                 title: "Partnership First",
