@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Services | MCK Media',
-  description: 'Expert web development, AI integration, and enterprise architecture services.',
+  title: 'Services',
+  description: 'Expert web development, AI integration, and enterprise architecture services. From AI integration to enterprise architecture, we build the web of tomorrow.',
 };
 
 const services = [

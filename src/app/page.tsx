@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
+
+export const metadata: Metadata = {
+  title: 'McKMedia | Modern Web. Made Human.',
+  description: 'We build digital experiences that sit at the intersection of modern technology and human-centered design. Clarity over cleverness. Craft over shortcuts.',
+};
 
 export default function Home() {
   return (

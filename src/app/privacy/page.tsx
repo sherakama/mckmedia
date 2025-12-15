@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | MCK Media',
-  description: 'Privacy Policy for MCK Media.',
+  title: 'Privacy Policy',
+  description: 'Privacy Policy for McKMedia. Learn how we collect, use, and protect your information.',
 };
 
 export default function PrivacyPage() {

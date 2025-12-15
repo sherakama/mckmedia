@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact | MCK Media',
-  description: 'Get in touch with MCK Media for your web development and digital strategy needs.',
+  title: 'Contact',
+  description: 'Get in touch with McKMedia for your web development and digital strategy needs. Ready to start your next project? We\'d love to hear from you.',
 };
 export default function ContactPage() {
   return (

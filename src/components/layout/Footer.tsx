@@ -14,7 +14,7 @@ export function Footer() {
               height={32}
               className="h-8 w-auto"
             />
-            <span className="font-bold tracking-wide text-white">MCKMEDIA</span>
+            <span className="font-bold tracking-wide text-white">McKMedia</span>
           </Link>
           <span className="hidden h-4 w-px bg-white/10 sm:block" />
           <p className="hidden sm:block">Modern Web. Made Human.</p>
@@ -23,7 +23,7 @@ export function Footer() {
         <p className="sm:hidden">Modern Web. Made Human.</p>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
-          <p>&copy; {new Date().getFullYear()} MCK Media. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} McKMedia. All rights reserved.</p>
           <Link href="/privacy" className="transition-colors hover:text-white">
             Privacy Policy
           </Link>
