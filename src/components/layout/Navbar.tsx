@@ -15,19 +15,20 @@ export function Navbar() {
             className="h-20 w-auto"
           />
         </Link>
-        <div className="flex items-center gap-8 text-sm font-medium text-white">
-          <Link
-            href="/services"
-            className="transition-colors hover:text-pink-500"
-          >
-            Services
-          </Link>
-          <Link
-            href="/contact"
-            className="transition-colors hover:text-pink-500"
-          >
-            Contact
-          </Link>
+        <div className="flex items-center gap-4">
+          {[
+            { href: '/services', label: 'Services' },
+            { href: '/contact', label: 'Contact' },
+          ].map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="group relative overflow-hidden rounded-full border border-white/10 bg-white/5 px-6 py-2 text-sm font-medium text-white transition-all hover:border-white/20 hover:bg-white/10"
+            >
+              <span className="relative z-10">{link.label}</span>
+              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-pink-500/10 to-orange-400/10 opacity-0 transition-opacity group-hover:opacity-100" />
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
