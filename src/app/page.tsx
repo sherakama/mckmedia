@@ -4,6 +4,22 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white selection:bg-pink-500/30">
+      {/* Navigation */}
+      <nav className="absolute top-0 left-0 z-50 w-full px-6 py-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <Link href="/" className="transition-opacity hover:opacity-80">
+            <Image
+              src="/logos/logo-pink-orange.png"
+              alt="MCK Media"
+              width={180}
+              height={50}
+              priority
+              className="h-12 w-auto"
+            />
+          </Link>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-6 text-center">
         <div className="absolute inset-0 -z-10">
@@ -17,7 +33,7 @@ export default function Home() {
             Made Human.
           </span>
         </h1>
-        
+
         <p className="mb-12 max-w-2xl text-xl text-gray-400 sm:text-2xl">
           We build digital experiences that sit at the intersection of modern technology and human-centered design.
         </p>
@@ -81,7 +97,7 @@ export default function Home() {
               </p>
             </div>
             <Link href="/services" className="group flex items-center gap-2 text-pink-500 hover:text-pink-400">
-              View all services 
+              View all services
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </div>
