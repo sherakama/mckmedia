@@ -1,81 +1,106 @@
-import Image from 'next/image';
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed top-0 left-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pt-8 pb-6 backdrop-blur-2xl lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:dark:bg-zinc-800/30">
-          MCK Media
-        </p>
-      </div>
+    <main className="min-h-screen bg-black text-white selection:bg-pink-500/30">
+      {/* Hero Section */}
+      <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-6 text-center">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500/20 blur-[120px]" />
+          <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500/20 blur-[100px] mix-blend-screen" />
+        </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-to-br before:from-transparent before:to-blue-500 before:opacity-10 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-to-t after:from-blue-200 after:via-blue-200 after:blur-2xl after:content-[''] before:lg:h-[360px] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40">
-        <h1 className="text-center text-6xl font-bold">
-          Building Digital Experiences
+        <h1 className="mb-8 max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl">
+          Modern Web.
+          <span className="block bg-gradient-to-r from-pink-500 via-orange-400 to-amber-400 bg-clip-text text-transparent">
+            Made Human.
+          </span>
         </h1>
-      </div>
+        
+        <p className="mb-12 max-w-2xl text-xl text-gray-400 sm:text-2xl">
+          We build digital experiences that sit at the intersection of modern technology and human-centered design.
+        </p>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="#"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Services{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the web development and design services I offer.
-          </p>
-        </a>
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <Link
+            href="/contact"
+            className="rounded-full bg-gradient-to-r from-pink-500 to-orange-400 px-8 py-4 text-lg font-semibold text-white transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-black"
+          >
+            Start Your Project
+          </Link>
+          <Link
+            href="/services"
+            className="rounded-full border border-white/20 bg-white/5 px-8 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+          >
+            Explore Services
+          </Link>
+        </div>
+      </section>
 
-        <a
-          href="#"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Portfolio{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Check out my recent projects and case studies.
-          </p>
-        </a>
+      {/* Differentiators Section */}
+      <section className="px-6 py-32 sm:px-12 lg:px-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-16 text-center">
+            <h2 className="text-3xl font-bold sm:text-4xl">Why MCK Media?</h2>
+            <p className="mt-4 text-gray-400">Clarity over cleverness. Craft over shortcuts.</p>
+          </div>
 
-        <a
-          href="#"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            About{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn more about my background and skills.
-          </p>
-        </a>
+          <div className="grid gap-8 md:grid-cols-3">
+            {[
+              {
+                title: "Human-Centered",
+                desc: "We don't hide behind jargon. We guide you through complexity and make the web understandable.",
+              },
+              {
+                title: "Technically Sharp",
+                desc: "Built on the latest stack (Next.js 16, Tailwind v4) for performance, accessibility, and scale.",
+              },
+              {
+                title: "Partnership First",
+                desc: "We believe in partnership over transactions. Your success is our success.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-2xl border border-white/10 bg-zinc-900/50 p-8">
+                <h3 className="mb-4 text-xl font-semibold text-pink-500">{item.title}</h3>
+                <p className="text-gray-400">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="#"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Contact{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Get in touch to discuss your next project.
-          </p>
-        </a>
-      </div>
-    </div>
+      {/* Services Highlight */}
+      <section className="relative border-t border-white/10 bg-zinc-950 px-6 py-32 sm:px-12 lg:px-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+            <div>
+              <h2 className="text-3xl font-bold sm:text-4xl">Our Expertise</h2>
+              <p className="mt-4 max-w-xl text-gray-400">
+                From AI integration to enterprise architecture, we have the skills to bring your vision to life.
+              </p>
+            </div>
+            <Link href="/services" className="group flex items-center gap-2 text-pink-500 hover:text-pink-400">
+              View all services 
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+
+          <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              "AI Integration",
+              "Web Management",
+              "Enterprise Architecture",
+              "Ecommerce Solutions",
+            ].map((service) => (
+              <div key={service} className="group relative overflow-hidden rounded-xl bg-white/5 p-6 transition-colors hover:bg-white/10">
+                <h3 className="font-semibold text-white">{service}</h3>
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-pink-500 to-orange-400 transition-all duration-300 group-hover:w-full" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
