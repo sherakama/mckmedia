@@ -1,9 +1,9 @@
 {
   "name": "mckmedia",
-  "version": "0.1.0",
+  "version": "10.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --experimental-https --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

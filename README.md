@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# McKMedia
 
-## Getting Started
+**Modern Web. Made Human.**
 
-First, run the development server:
+---
+
+## 👋 Welcome to the Engine Room
+
+If you're reading this, you've likely stumbled upon our repository while doing due diligence. Maybe you're a potential client checking if we actually write good code, or maybe you're a developer looking for a job (or just judging our commit history).
+
+Either way, welcome. We appreciate the curiosity.
+
+## 🤖 The Elephant in the Repo
+
+Let's address the question on your mind: **"Did you use AI to build this?"**
+
+**Yes. Absolutely.**
+
+At McKMedia, we believe in clarity over cleverness and results over ego. We use advanced AI agents as force multipliers. They handle the boilerplate, the repetitive typing, and the syntax checking. This frees us up to focus on what actually matters: **Architecture, User Experience, and Brand Soul.**
+
+We don't hide behind jargon, and we don't hide our tools. We build faster, better, and more reliably because we embrace the future of development.
+
+## 🛠 The Stack
+
+This isn't just a website; it's a statement on modern performance.
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router, Server Components)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (The future of CSS)
+- **Language:** TypeScript (Strict mode, because we like to sleep at night)
+- **Hosting:** [Netlify](https://www.netlify.com/) (Global edge network, zero-config forms)
+- **Animation:** Motion (formerly Framer Motion)
+
+## 💼 For Potential Clients
+
+Look around. Notice the structure. Notice the lack of `any` types. Notice how the accessibility features aren't an afterthought—they're baked in.
+
+This is the level of care we bring to every project. We don't just "make websites"; we build digital infrastructure that scales with your business.
+
+**Ready to build something real?**  
+[Get in touch](https://mckmedia.ca/contact)
+
+## 👩‍💻 For Job Seekers
+
+If you're looking to join the team, here's the deal:
+
+1.  **We use AI.** If you think that's "cheating," we're probably not a good fit.
+2.  **We care about the user.** Code is a means to an end. The end is a human being having a great experience.
+3.  **We move fast.** See point #1.
+
+## 🚀 Running Locally
+
+If you really want to spin this up on your machine:
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [https://localhost:3000](https://localhost:3000) and enjoy the glow.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+&copy; 2025 McKMedia. All rights reserved.
