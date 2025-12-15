@@ -1,15 +1,11 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
 import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact | MCK Media',
   description: 'Get in touch with MCK Media for your web development and digital strategy needs.',
 };
-export default async function ContactPage() {
-  const cookieStore = await cookies();
-  const csrfToken = cookieStore.get('csrf_token')?.value || '';
-
+export default function ContactPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       <section className="px-6 pt-48 pb-24 sm:px-12 lg:px-24">
@@ -53,7 +49,7 @@ export default async function ContactPage() {
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-zinc-900/50 p-8 sm:p-12 backdrop-blur-xl">
-              <ContactForm csrfToken={csrfToken} />
+              <ContactForm />
             </div>
           </div>
         </div>

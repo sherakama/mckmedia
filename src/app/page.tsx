@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/Button";
@@ -9,14 +8,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-6 text-center">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500/20 blur-[120px]" />
-          <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500/20 blur-[100px] mix-blend-screen" />
+          <div className="absolute left-1/2 top-1/2 h-125 w-125 -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500/20 blur-[120px]" />
+          <div className="absolute left-1/2 top-1/2 h-100 w-100 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500/20 blur-[100px] mix-blend-screen" />
         </div>
 
         <FadeIn>
           <h1 className="mb-8 max-w-4xl text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl">
             Modern Web.
-            <span className="block bg-gradient-to-r from-pink-500 via-orange-400 to-amber-400 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-pink-500 via-orange-400 to-amber-400 bg-clip-text text-transparent">
               Made Human.
             </span>
           </h1>
@@ -104,7 +103,7 @@ export default function Home() {
               <FadeIn key={service} delay={index * 0.1}>
                 <div className="group relative h-full overflow-hidden rounded-xl bg-white/5 p-6 transition-colors hover:bg-white/10">
                   <h3 className="font-semibold text-white">{service}</h3>
-                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-pink-500 to-orange-400 transition-all duration-300 group-hover:w-full" />
+                  <div className="absolute bottom-0 left-0 h-1 w-0 bg-linear-to-r from-pink-500 to-orange-400 transition-all duration-300 group-hover:w-full" />
                 </div>
               </FadeIn>
             ))}
@@ -112,11 +111,11 @@ export default function Home() {
             <FadeIn delay={0.4} className="sm:col-span-2 lg:col-span-2">
               <Link
                 href="/contact"
-                className="group relative flex h-full flex-col items-start justify-center overflow-hidden rounded-xl bg-gradient-to-br from-pink-500 to-orange-400 p-8 text-white transition-transform hover:scale-[1.01]"
+                className="group relative flex h-full flex-col items-start justify-center overflow-hidden rounded-xl bg-linear-to-br from-pink-500 to-orange-400 p-8 text-white transition-transform hover:scale-[1.01]"
               >
                 <h3 className="text-2xl font-bold">Have a project in mind?</h3>
                 <p className="mt-2 max-w-md text-white/90">
-                  Let's collaborate to build a digital experience that matters.
+                  Let&apos;s collaborate to build a digital experience that matters.
                 </p>
                 <div className="mt-6 flex items-center gap-2 rounded-full bg-white/20 px-6 py-2 font-semibold backdrop-blur-sm transition-colors group-hover:bg-white/30">
                   Get in Touch <span className="transition-transform group-hover:translate-x-1">→</span>

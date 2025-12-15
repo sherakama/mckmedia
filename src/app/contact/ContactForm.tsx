@@ -1,34 +1,44 @@
 'use client';
 
-import { useActionState, useState, useEffect } from 'react';
-import { submitContactForm } from './actions';
+import { useState, FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from '@/components/ui/Button';
 
-const initialState = {
-  success: false,
-  error: '',
-};
-
-interface ContactFormProps {
-  csrfToken: string;
-}
-
-export function ContactForm({ csrfToken }: ContactFormProps) {
-  const [state, formAction, isPending] = useActionState(async (prevState: any, formData: FormData) => {
-    const result = await submitContactForm(formData);
-    return result;
-  }, initialState);
-
+export function ContactForm() {
+  const [isPending, setIsPending] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
   const [hasDismissedSuccess, setHasDismissedSuccess] = useState(false);
 
-  useEffect(() => {
-    if (state?.success) {
-      setHasDismissedSuccess(false);
-    }
-  }, [state]);
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsPending(true);
+    setError('');
 
-  const showSuccess = state?.success && !hasDismissedSuccess;
+    const formData = new FormData(event.currentTarget);
+
+    try {
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(Array.from(formData) as [string, string][]).toString(),
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        setHasDismissedSuccess(false);
+        (event.target as HTMLFormElement).reset();
+      } else {
+        setError('Something went wrong. Please try again.');
+      }
+    } catch {
+      setError('Failed to send message. Please check your connection.');
+    } finally {
+      setIsPending(false);
+    }
+  };
+
+  const showSuccess = success && !hasDismissedSuccess;
 
   return (
     <div className="relative">
@@ -40,7 +50,7 @@ export function ContactForm({ csrfToken }: ContactFormProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="rounded-lg bg-gradient-to-r from-pink-500/10 to-orange-400/10 p-6 border border-pink-500/20"
+            className="rounded-lg bg-linear-to-r from-pink-500/10 to-orange-400/10 p-6 border border-pink-500/20"
           >
             <h3 className="text-lg font-semibold text-pink-500">Message Sent!</h3>
             <p className="mt-2 text-gray-300">Thanks for reaching out. We&apos;ll get back to you shortly.</p>
@@ -59,13 +69,26 @@ export function ContactForm({ csrfToken }: ContactFormProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            action={formAction}
+            onSubmit={handleSubmit}
             className="space-y-6"
           >
-            <input type="hidden" name="csrf_token" value={csrfToken} />
-            {state?.error && (
+            <input type="hidden" name="form-name" value="contact" />
+
+            {/* Honeypot field - invisible to humans */}
+            <div aria-hidden="true" className="absolute opacity-0 -z-10 w-0 h-0 overflow-hidden">
+              <label htmlFor="bot-field">Don&apos;t fill this out if you&apos;re human:</label>
+              <input
+                type="text"
+                name="bot-field"
+                id="bot-field"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
+            {error && (
               <div className="rounded-md bg-red-500/10 p-4 text-sm text-red-400 border border-red-500/20">
-                {state.error}
+                {error}
               </div>
             )}
             <div>
