@@ -16,15 +16,15 @@ export function Navbar() {
           />
         </Link>
         <div className="flex items-center gap-8 text-sm font-medium text-white">
-          <Link 
-            href="/services" 
+          <Link
+            href="/services"
             className="transition-colors hover:text-pink-500"
           >
             Services
           </Link>
-          <Link 
-            href="/contact" 
-            className="rounded-full bg-white/10 px-6 py-2 transition-colors hover:bg-white/20"
+          <Link
+            href="/contact"
+            className="transition-colors hover:text-pink-500"
           >
             Contact
           </Link>
