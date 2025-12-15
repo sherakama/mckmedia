@@ -4,7 +4,8 @@ AGENTS.md
 > **System Context:** University Web Infrastructure (Student/Faculty Facing)  
 > **Primary Goals:** Accessibility (WCAG 2.1 AA), Performance (Core Web Vitals), Maintainability.  
 > **Critical Constraint:** **NO Prettier**. Do not install, configure, or suggest Prettier.  
-> **McKMedia** Is one word, no spaces, and has a little "c"
+> **Critical Constraint:** **NO Git Actions**. Do not run git commands. The user will handle version control.
+> **McKMedia** Is one word, no spaces, and has a little "c".  
 
 # 1. Tech Stack & Environment
 

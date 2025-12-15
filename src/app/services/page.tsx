@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Services | MCK Media',
@@ -39,7 +40,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="px-6 py-24 sm:px-12 lg:px-24">
+      <section className="px-6 pt-48 pb-24 sm:px-12 lg:px-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 max-w-3xl">
             <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-pink-500 via-orange-400 to-amber-400 bg-clip-text text-transparent">
@@ -65,6 +66,19 @@ export default function ServicesPage() {
                 <div className="absolute inset-0 -z-10 bg-gradient-to-br from-pink-500/5 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </div>
             ))}
+
+            <Link
+              href="/contact"
+              className="group relative flex flex-col items-start justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-pink-500 to-orange-400 p-8 text-white transition-transform hover:scale-[1.01]"
+            >
+              <h3 className="mb-2 text-2xl font-bold">Ready to start?</h3>
+              <p className="mb-6 text-white/90">
+                Let's turn your vision into reality. Reach out today.
+              </p>
+              <div className="flex items-center gap-2 rounded-full bg-white/20 px-6 py-2 font-semibold backdrop-blur-sm transition-colors group-hover:bg-white/30">
+                Get in Touch <span className="transition-transform group-hover:translate-x-1">→</span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
